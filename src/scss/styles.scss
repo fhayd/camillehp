@@ -1,2 +1,34 @@
 // Import all of Bootstrap's CSS
 @import "~bootstrap/scss/bootstrap";
+
+
+.nav-pills > button {
+    margin-left: 12px;
+}
+
+.separator{
+    margin: 48px 48px;
+    border-bottom: solid 1px black;
+}
+
+.titles{
+    text-align: center;
+}
+
+.content {
+    background-color: #edbb99;
+    text-align: center;
+    > h2 {
+        padding-top: 24px;
+    }
+    > p {
+        padding-bottom: 24px;
+        width: 75%;
+        margin: auto;
+    }
+}
+
+#map {
+    height: 300px;
+    width: 100%;
+}
