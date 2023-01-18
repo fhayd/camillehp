@@ -15,14 +15,10 @@ jobs:
     runs-on: ubuntu-latest
     name: Build and Deploy Job
     steps:
+      - run: npm install && npm build
       - uses: actions/checkout@v2
         with:
           submodules: true
-      - run: |
-          npm install -g webpack webpack-cli --save-dev
-          npm install
-          npx webpack --config webpack.config.js
-        displayName: 'npm install, run webpack'
       - name: Build And Deploy
         id: builddeploy
         uses: Azure/static-web-apps-deploy@v1
