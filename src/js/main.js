@@ -1,8 +1,8 @@
 // Import our custom CSS
-import '../scss/styles.scss'
+import "../scss/styles.scss";
 
 // Import all of Bootstrap's JS
-import * as bootstrap from 'bootstrap'
+import * as bootstrap from "bootstrap";
 
 let map;
 const office = { lat: 45.765023, lng: 4.863037 };
@@ -15,8 +15,8 @@ function initMap() {
 
   new google.maps.Marker({
     position: office,
-    map
-  })
+    map,
+  });
 }
 
 window.initMap = initMap;
