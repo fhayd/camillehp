@@ -1,57 +1,153 @@
 // Import all of Bootstrap's CSS
 @import "~bootstrap/scss/bootstrap";
 
-.header{
-    background-image: url('../assets/banner_bg.png');
-    background-repeat: no-repeat;
-    background-size: cover;
-    margin: 0 -12px;
-    padding: 0 12px;
+// https://coolors.co/80cfa9-4c6663-f7dad9-504b43-f06449
+
+body {
 }
 
-.header-button{
-    max-height: 42px;
-}
-.nav-pills > button {
-    margin-left: 12px;
-}
-
-.separator{
-    margin: 48px 48px;
-    border-bottom: solid 1px black;
-}
-
-.titles{
+.sidenav {
+    height: 100%; /* Full-height: remove this if you want "auto" height */
+    width: 18%; /* Set the width of the sidebar */
+    position: fixed; /* Fixed Sidebar (stay in place on scroll) */
+    z-index: 1; /* Stay on top */
+    top: 0; /* Stay at the top */
+    left: 0;
+    background-color: #4c6663;
+    overflow-x: hidden; /* Disable horizontal scroll */
+    overflow-y: hidden;
+    padding-top: 20px;
+    margin: 0 !important;
     text-align: center;
-}
 
-h2{
-    color: #aab9a0
-}
+    color: #f3f9e3;
 
-.content {
-    // background-color: #edbb99;
-    text-align: center;
-    > h2 {
-        padding-top: 24px;
+    a {
+        color: white;
     }
-    > p {
-        padding-bottom: 24px;
+
+    > .content {
+        height: 100%;
+        align-content: space-around;
+    }
+
+    .header-button {
+        max-height: 42px;
+        margin-bottom: 12px;
+    }
+    .nav-pills {
+        display: flex;
+        flex-flow: column;
+        justify-content: center;
+    }
+
+    .avatar-container {
+        width: 100%;
+    }
+
+    .avatar {
         width: 75%;
+        padding-top: 75%;
+        background-image: url(../assets/avatar.jpeg);
+        background-size: cover;
+        border: solid 1px #048a81;
+        border-radius: 50%;
         margin: auto;
-        text-align: justify;
     }
-}
 
-#map {
-    margin-top: 24px;
-    margin-bottom: 48px;
-    height: 500px;
-    width: 100%;
-}
-
-.contact{
-    >h2{
+    .name {
+        display: flex;
+        flex-flow: column;
         text-align: center;
+        font-size: 2.5em;
+
+        h2 {
+            color: white;
+        }
     }
+
+    button,
+    .abutton {
+        border-color: #504b43;
+        /* background-color: #4c6663; */
+        color: white;
+        background-color: #504b43;
+    }
+}
+
+.main {
+    margin-left: 18%; /* Same as the width of the sidebar */
+    padding: 0px 10px;
+    background-color: #f3f9e3;
+    background-image: url(../assets/colourful_abstract_shapes.png);
+    background-repeat: no-repeat;
+
+    .separator {
+        margin: 48px 48px;
+        border-bottom: solid 1px black;
+    }
+
+    .titles {
+        /* text-align: center; */
+        height: 100vh;
+        align-content: center;
+        height: 100vh;
+
+        h1 {
+            color: #4c6663;
+            font-size: 8em;
+        }
+
+        p {
+            font-size: 3em;
+        }
+    }
+
+    h2 {
+        color: #aab9a0;
+    }
+
+    .content {
+        text-align: center;
+        > h2 {
+            padding-top: 24px;
+        }
+        > p {
+            padding-bottom: 24px;
+            width: 75%;
+            margin: auto;
+            text-align: justify;
+        }
+
+        .titles {
+            height: 100vh;
+            align-content: center;
+            text-justify: center;
+
+            > h1 {
+                font-size: 6em;
+            }
+
+            > p {
+                font-size: 4em;
+            }
+        }
+    }
+
+    #map {
+        margin-top: 24px;
+        margin-bottom: 48px;
+        height: 500px;
+        width: 100%;
+    }
+
+    .contact {
+        > h2 {
+            text-align: center;
+        }
+    }
+}
+
+gap-16 {
+    gap: 16px;
 }
